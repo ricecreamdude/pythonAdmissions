@@ -2,6 +2,21 @@ doctype html
 html
   head
     title = "Hello Pug"
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+    script(src ='/js/pokeSearch.js')
   body
-    h1=name 
-    p Hello PugWorld!
+    div
+      h1 Codefellows Python 401 Pokedex
+    div
+      p Enter a pokemon ID between 1 and 151
+      input#pokeId(type="text", value="")
+      input#pokeSubmit(
+        type="button", 
+        value="Submit",
+        onClick="pokeSearch()")
+
+    div
+      block content
+
+  footer
+    

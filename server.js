@@ -7,9 +7,13 @@ const indexRouter = require('./routes/index');
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
+//Serve static files BEFORE adding routes
+app.use(express.static('public'));
 
 //Create a route to serve index page
 app.use('/', indexRouter);
+
+
 
 // app.get('/', (req, res) => res.send('Hello World!'));
 
