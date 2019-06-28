@@ -1,0 +1,26 @@
+{
+  "name": "pythonadmissions",
+  "version": "1.0.0",
+  "description": "Pokemon application for Code Fellow's Python admissions exam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricecreamdude/pythonAdmissions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricecreamdude/pythonAdmissions/issues"
+  },
+  "homepage": "https://github.com/ricecreamdude/pythonAdmissions#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "express-generator": "^4.16.1"
+  }
+}
