@@ -13,6 +13,7 @@ router.get('/:id', (req, res, next) => {
     let url = 'https://pokeapi.co/api/v2/pokemon/';
     let pokemonData;
 
+    //Pokemon API 
     fetch(url + req.params.id) 
         .then( res => res.json())
         .then( data => {
@@ -30,11 +31,6 @@ router.get('/:id', (req, res, next) => {
         res.send('Sorry, no pokemon with that ID');
     }
 
-
-
-
-
-    // res.send('The id you requested is ' + req.params.id);
 });
 
 module.exports = router;
