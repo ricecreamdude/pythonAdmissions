@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-let mongo = require('mongodb');
+// let mongo = require('mongodb');
 let Papa = require('papaparse');
 
 let csvUrl = "localhost:3000/data/pokemon.csv";
