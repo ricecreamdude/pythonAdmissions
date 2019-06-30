@@ -1,0 +1,62 @@
+body {
+  font-family: 'Barriecito', cursive;
+  color: #FFC92F;
+  text-shadow: 2px 2px 5px #004191, 0px 2px 5px #004191, 2px 0px 5px #004191;
+}
+#header{
+  display: grid;
+  place-content: center;
+}
+#subtext{
+margin: 0 auto;
+}
+input{
+  background-color: #F8F8DB;
+  border: 3px solid #4F6860;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 100;
+  border-radius: 5px;
+  color:#404040;
+  text-shadow: 1px 1px 2px #D8D0B3;
+}
+#pokemon{
+  display: grid;
+  place-content: center;
+}
+#pokemon p{
+  font-size: 2em;
+  text-align: center;
+  text-transform: capitalize;
+  
+}
+#mainPokemon{
+  height: 30vh;
+  margin: 0 auto;
+}
+#pokeId{
+  height: 2vh;
+  width: 10vw;
+  margin: 0 auto;
+}
+#pokeSubmit{
+  height: 3vh;
+  width: 10vw;
+  margin: 0 auto;
+
+}
+#grass{
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 50vh;
+  background-image: url(/img/cartoon_grass_png_226794.png);
+  background-position: 0 30%;
+}
+footer{
+  text-align: center;
+  opacity: 0.75;
+  position: fixed;
+  bottom: 1px;
+  left: 50vw;
+  z-index: 2;
+}

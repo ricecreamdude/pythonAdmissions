@@ -1,5 +1,6 @@
 let express = require('express');
 let router = express.Router();
+<<<<<<< HEAD
 
 var fs = require('fs');
 const csv = require('csv-parser');
@@ -17,13 +18,12 @@ fs.createReadStream('./public/data/pokemon.csv')
     console.log('CSV File successfully processed');
   });
 
-//Access DB
-
 const dbUrl = "mongodb+srv://ho_admin:ww7zqlswbdHMiyg2@pokemondb-o61qa.mongodb.net/test?retryWrites=true&w=majority"
 var db;
 let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
 const client = new MongoClient(dbUrl, { useNewUrlParser: true });
+
 
 //Connect to DB
 client.connect(err => {

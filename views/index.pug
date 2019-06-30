@@ -2,21 +2,24 @@ doctype html
 html
   head
     title = "Hello Pug"
+    link(rel="stylesheet", href="/css/styles.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barriecito&display=swap")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap") 
     script(src="https://code.jquery.com/jquery-3.4.1.min.js")
     script(src ='/js/pokeSearch.js')
   body
-    div
+    div#header
       h1 Codefellows Python 401 Pokedex
+      p#subtext Enter a pokemon ID between 1 and 151
     div
-      p Enter a pokemon ID between 1 and 151
+    div#pokemon
+      block content
       input#pokeId(type="text", value="")
       input#pokeSubmit(
         type="button", 
         value="Submit",
         onClick="pokeSearch()")
+    div#grass
 
-    div
-      block content
-
-  footer
+  footer &copy Josh
     
