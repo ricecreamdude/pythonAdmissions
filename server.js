@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 
 const indexRouter = require('./routes/index');
+const mongoRouter = require('./routes/mongoRouter');
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
@@ -10,7 +11,8 @@ app.set('views', __dirname + '/views');
 //Serve static files BEFORE adding routes
 app.use(express.static('public'));
 
-//Create a route to serve index page
+//Routes
+app.use('/mongo', mongoRouter);
 app.use('/', indexRouter);
 
 

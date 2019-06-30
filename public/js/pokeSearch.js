@@ -1,5 +1,3 @@
-// console.log('hello from pokeSearch');
-
 $('#pokeSubmit').click( pokeSearch )
 
 function pokeSearch(){

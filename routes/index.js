@@ -1,24 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var fetch = require('node-fetch')
-
-
-//root = https://pokeapi.co/api/v2/
-
-//id = https://pokeapi.co/api/v2/pokemon/1/
-//name = https://pokeapi.co/api/v2/pokemon/name/
-
-
+var fetch = require('node-fetch');
 
 router.get('/', (req, res, next) => {
-    // res.send('Hello world from Pug!');
-    res.render('index', {
+        res.render('index', {
         name: "Hello welcome to Josh's Python 401 Pokedex form"
-    }
-    );
+    });
 });
 
-router.get('/:id', (req,res) => {
+router.get('/:id', (req, res, next) => {
 
     let url = 'https://pokeapi.co/api/v2/pokemon/';
     let pokemonData;

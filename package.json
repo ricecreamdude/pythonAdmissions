@@ -18,7 +18,9 @@
   "homepage": "https://github.com/ricecreamdude/pythonAdmissions#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^3.2.7",
     "node-fetch": "^2.6.0",
+    "papaparse": "^5.0.0",
     "pug": "^2.0.4"
   },
   "devDependencies": {
