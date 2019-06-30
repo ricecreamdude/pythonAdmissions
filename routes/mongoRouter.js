@@ -1,21 +1,27 @@
 let express = require('express');
 let router = express.Router();
 let mongo = require('mongodb');
-let Papa = require('papaparse');
 
-let csvUrl = "localhost:3000/data/pokemon.csv";
+var fs = require('fs');
+const csv = require('csv-parser');
 
-//localhost:3000/mongo
+//./public/data/pokemon.csv
+let pokeArray = [];
+
+fs.createReadStream('./public/data/pokemon.csv')
+  .pipe( csv() )
+  .on('data', (row) => {
+    console.log(row)
+    pokeArray.push(row)
+  })
+  .on('end', () => {
+    console.log('CSV File successfully processed');
+  });
+
 router.get('/', (req, res, next) => {
 
-  let csv = Papa.parse(csvUrl, {
-    complete: function(results) {
-      console.log("Finished:", results.data);
-      res.send(results.data);
-      
-    }
-  });
   //Print out some data from the CSV file here:
+  res.send( pokeArray.splice(0,151) );
   next();  
   
 });
