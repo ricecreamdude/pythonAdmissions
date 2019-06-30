@@ -1,6 +1,5 @@
 let express = require('express');
 let router = express.Router();
-<<<<<<< HEAD
 
 var fs = require('fs');
 const csv = require('csv-parser');
