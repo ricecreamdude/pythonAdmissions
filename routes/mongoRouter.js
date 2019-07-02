@@ -24,38 +24,37 @@ function createPokemon(_id, name, classification, type1, type2, hp, attack, defe
     }
   }
 
-
 }
 
 
 //Stream .csv data
-fs.createReadStream('./public/data/pokemon.csv')
-  .pipe( csv() )
-  .on('data', (row) => {
+// fs.createReadStream('./public/data/pokemon.csv')
+//   .pipe( csv() )
+//   .on('data', (row) => {
 
-    // if (row.pokedex_number === "1"){
-    //   console.log(row);
-    // }
-    // console.log(row);
-    let newPokemon = createPokemon(
-      row.pokedex_number,
-      row.name,
-      row.classfication,
-      row.type1,
-      row.type2,
-      row.hp,
-      row.attack,
-      row.defense,
-      row.speed,
-      row.sp_attack,
-      row.sp_defense
-    )
-    //Populate internal array with pokemon data ready to push to Mongo
-    pokeArray.push(newPokemon)
-  })
-  .on('end', () => {
-    console.log('CSV File successfully processed');
-  });
+//     // if (row.pokedex_number === "1"){
+//     //   console.log(row);
+//     // }
+//     // console.log(row);
+//     let newPokemon = createPokemon(
+//       row.pokedex_number,
+//       row.name,
+//       row.classfication,
+//       row.type1,
+//       row.type2,
+//       row.hp,
+//       row.attack,
+//       row.defense,
+//       row.speed,
+//       row.sp_attack,
+//       row.sp_defense
+//     )
+//     //Populate internal array with pokemon data ready to push to Mongo
+//     pokeArray.push(newPokemon)
+//   })
+//   .on('end', () => {
+//     console.log('CSV File successfully processed');
+//   });
 
 //Connect to database
 const dbUrl = "mongodb+srv://ho_admin:ww7zqlswbdHMiyg2@pokemondb-o61qa.mongodb.net/test?retryWrites=true&w=majority"

@@ -1,7 +1,29 @@
 extends index.pug
 
 block content
-  div
-    img#mainPokemon(src=imgUrl)
-    p=name
+  div#frame
+    div#pokemon
+      img#mainPokemon(src=imgUrl)
+    div#stats
+      ul
+        li HP: 
+          span=hp
+        li ATK:
+          span=attack
+        li DEF:
+          span=defense
+      ul
+        li SPD:
+          span=speed
+        li SpAtk:
+          span=sp_attack
+        li SpDef:
+          span=sp_defense
+  div#nameDiv
+    h1=name
+    h3=classification
+    div
+      h3=type1
+      h3=type2
+    
   

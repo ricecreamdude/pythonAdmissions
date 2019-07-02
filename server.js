@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-const indexRouter = require('./routes/index');
-const mongoRouter = require('./routes/mongoRouter');
+const mongoose = require('mongoose');
+
+const pokeRouter = require('./routes/pokeRouter');
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
@@ -12,8 +13,8 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
 //Routes
-app.use('/mongo', mongoRouter);
-app.use('/', indexRouter);
+// app.use('/mongo', mongoRouter);
+app.use('/', pokeRouter);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 

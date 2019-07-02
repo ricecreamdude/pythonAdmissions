@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title = "Hello Pug"
+    title Pokedex Application
     link(rel="stylesheet", href="/css/styles.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barriecito&display=swap")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap") 
@@ -11,15 +11,14 @@ html
     div#header
       h1 Codefellows Python 401 Pokedex
       p#subtext Enter a pokemon ID between 1 and 151
-    div
-    div#pokemon
-      block content
+    div#inputArea
       input#pokeId(type="text", value="")
       input#pokeSubmit(
         type="button", 
         value="Submit",
         onClick="pokeSearch()")
+    div#pokemon
+      block content
     div#grass
-
   footer &copy Josh
     
