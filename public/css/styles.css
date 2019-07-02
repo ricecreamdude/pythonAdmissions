@@ -1,14 +1,20 @@
 body {
-  font-family: 'Barriecito', cursive;
+  /* font-family: 'Barriecito', cursive; */
   color: #FFC92F;
   text-shadow: 2px 2px 5px #004191, 0px 2px 5px #004191, 2px 0px 5px #004191;
+}
+
+ul {
+  list-style: none;
 }
 #header{
   display: grid;
   place-content: center;
 }
 #subtext{
-margin: 0 auto;
+  margin: 5px 0 10px 0; 
+  text-align: center;
+  font-size: 18px;
 }
 input{
   background-color: #F8F8DB;
@@ -18,6 +24,21 @@ input{
   border-radius: 5px;
   color:#404040;
   text-shadow: 1px 1px 2px #D8D0B3;
+  text-align: center;
+}
+
+#frame{
+  width: 100%;
+  height: 200px;
+}
+
+#frame div{
+  width: 50%;
+  float: left;
+}
+
+#nameDiv{
+  text-align: center;
 }
 #pokemon{
   display: grid;
@@ -29,17 +50,21 @@ input{
   text-transform: capitalize;
   
 }
+
+#inputArea {
+  text-align: center;
+}
 #mainPokemon{
-  height: 30vh;
+  height: 220px;
   margin: 0 auto;
 }
 #pokeId{
-  height: 2vh;
+  height: 30px;
   width: 10vw;
   margin: 0 auto;
 }
 #pokeSubmit{
-  height: 3vh;
+  height: 30px;
   width: 10vw;
   margin: 0 auto;
 
