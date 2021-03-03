@@ -25,7 +25,7 @@
     "mongoose": "^5.6.2",
     "node-fetch": "^2.6.0",
     "papaparse": "^5.0.0",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "express-generator": "^4.16.1"
